@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            margin-top: 5rem;
+            margin-left: 10rem;
+        }
+        .face-field {
+            position: relative;
+            width: 8rem;
+            height: 8rem;
+        }
+        .ears {
+            position: absolute;
+            top: 0;
+            left: 5.5rem;
+            top: -2.7rem;
+            rotate: 25deg;
+        }
+        .ears2 {
+            position: absolute;
+            top: 0;
+            left: -1rem;
+            top: -1.1rem;
+            rotate: -25deg;
+        }
+        .face .ear::before{
+            content: '';
+            position: absolute;
+            width: 3rem;
+            height: 3rem;
+            background: #f77d7d;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            border: 5px solid #858383;
+        }
+
+        .face::before {
+            content: '';
+            position: absolute;
+            width: 8rem;
+            height: 8rem;
+            border-radius: 10rem;
+            background: #858383;
+        }
+
+        .eyes {
+            position: absolute;
+            width: 6rem;
+            height: 3rem;
+            bottom: 3.3rem;
+            left: 4.5rem;
+        }
+        .eyes2 {
+            position: absolute;
+            width: 6rem;
+            height: 3rem;
+            bottom: 3.3rem;
+            left: 1rem;
+        }
+
+        .outer-eye::before {
+            content: '';
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 10rem;
+            background: #fff;
+        }
+
+        .inner-eye::before {
+            content: '';
+            position: absolute;
+            width: 1.3rem;
+            height: 1.3rem;
+            border-radius: 10rem;
+            background: #0a0a0a;
+            bottom: 1rem;
+            left: 6px;
+        }
+        .nose::before {
+            position: absolute;
+            content: '';
+            width: 1rem;
+            height: 1rem;
+            background: #f77d7d;
+            border: 3px solid #858383;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            border-radius: 5px;
+            bottom: 3.5rem;
+            left: 3.1rem;
+            rotate: 180deg;
+        }
+
+        .ms-field,.ms-field2 {
+            display: flex;
+            gap: 5px;
+            width: 3rem;
+            height: 3rem;
+            flex-direction: column;
+            top: 3.6rem;
+            left: 1rem;
+            position: absolute;
+        }
+
+        .ms-field2 {
+            left: 4.5rem;
+        }
+
+        .ms-field hr ,.ms-field2 hr{
+            width: 2rem;
+            height: 1px;
+            background: #000;
+            z-index: 10;
+            position: absolute;
+            margin-top: 4px;
+        }
+
+        .mouth::before {
+            position: absolute;
+            content: '';
+            width: 3rem;
+            height: 3rem;
+            background: #000;
+            border-radius: 5rem;
+            bottom: 0.3rem;
+            left: 2.4rem;
+        }
+
+        .body {
+            width: 13rem;
+            height: 13rem;
+            background: #b8cbd1;
+            border-radius: 25rem;
+            position: absolute;
+            z-index: -1;
+            top: 9rem;
+            left: 11rem;
+        }
+
+        .legs {
+            position: absolute;
+            bottom: 5px;
+            left: 1.5rem;
+        }
+        .legs2 {
+            position: absolute;
+            bottom: 5px;
+            left: 8rem;
+        }
+
+        .legs hr{
+            width: 1.3rem;
+            z-index: 20;
+            border: 2px solid #000;
+        }
+
+        .legs2 hr{
+            width: 1.3rem;
+            z-index: 20;
+            border: 2px solid #000;
+        }
+
+        .legs {
+            position: absolute;
+            rotate: 90deg;
+            bottom: -1.3rem;
+            right: 5rem;
+        }
+
+        .legs2 {
+            position: absolute;
+            rotate: 90deg;
+            bottom: -1rem;
+            right: -1rem;
+        }
+
+        .line {
+            position: absolute;
+            bottom: -3rem;
+            left: 1.8rem;
+        }
+
+        .leg::before {
+            width: 3.5rem;
+            height: 3.5rem;
+            background: #858383;
+            content: '';
+            position: absolute;
+            border-radius: 5rem;
+            z-index: -1;
+        }
+
+        .val {
+            position: absolute;
+            right: -9rem;
+            top: 8rem;
+        }
+
+        .val span::before {
+            content: '';
+            position: absolute;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #858383;
+            border-radius: 5rem;
+        }
+        .val-field {
+            width: 10rem;
+            height: 8rem;
+                }
+        .v2 {
+            position: absolute;
+            left: 1.8rem;
+            top: -0.5rem;
+        }
+        .v3 {
+            position: absolute;
+            left: 3rem;
+            top: -1.7rem;
+        }
+        .v4 {
+            position: absolute;
+            left: 3.6rem;
+            top: -3.4rem;
+        }
+        .v5 {
+            position: absolute;
+            left: 3.7rem;
+            top: -5rem;
+        }
+
+        .v2 span::before, .v4 span::before {
+            background: #b8cbd1 !important;
+            z-index: 10;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="face-field">
+
+            <div class="face">
+                <div class="ears">
+                    <span class="ear"></span>
+                </div>
+                <div class="ears2">
+                    <span class="ear"></span>
+                </div>
+                <div class="eyes">
+                    <div class="outer-eye">
+                        <div class="inner-eye"></div>
+                    </div>
+                    </div>
+                    <div class="eyes2">
+                    <div class="outer-eye">
+                        <div class="inner-eye"></div>
+                    </div>
+                </div>
+                <div class="nose"></div>
+                <div class="ms-field">
+                    <div class="h1">
+                        <hr>
+                    </div>
+                    <div class="h1">
+                        <hr>
+                    </div>
+                    <div class="h1">
+                        <hr>
+                    </div>
+                </div>
+                <div class="ms-field2">
+                    <div class="h1">
+                        <hr>
+                    </div>
+                    <div class="h1">
+                        <hr>
+                    </div>
+                    <div class="h1">
+                        <hr>
+                    </div>
+                </div>
+                <div class="ms-field2">
+                    <span class="l"></span>
+                    <span class="l"></span>
+                    <span class="l"></span>
+                </div>
+                <div class="mouth"></div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="legs">
+                <div class="leg">
+                    <div class="line">
+                        <hr>
+                        <hr>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="legs2">
+                <div class="leg">
+                    <div class="line">
+                        <hr>
+                        <hr>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="val">
+                <div class="val-field">
+    
+                    <div class="v1">
+                        <span></span>
+                    </div>
+                    <div class="v2">
+                        <span></span>
+                    </div>
+                    <div class="v3">
+                        <span></span>
+                    </div>
+                    <div class="v4">
+                        <span></span>
+                    </div>
+                    <div class="v5">
+                        <span></span>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

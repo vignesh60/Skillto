@@ -1,340 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat</title>
-    <style>
-        .container{
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            margin-top: 5rem;
-            margin-left: 10rem;
-        }
-        .face-field {
-            position: relative;
-            width: 8rem;
-            height: 8rem;
-        }
-        .ears {
-            position: absolute;
-            top: 0;
-            left: 5.5rem;
-            top: -2.7rem;
-            rotate: 25deg;
-        }
-        .ears2 {
-            position: absolute;
-            top: 0;
-            left: -1rem;
-            top: -1.1rem;
-            rotate: -25deg;
-        }
-        .face .ear::before{
-            content: '';
-            position: absolute;
-            width: 3rem;
-            height: 3rem;
-            background: #f77d7d;
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            border: 5px solid #858383;
-        }
-
-        .face::before {
-            content: '';
-            position: absolute;
-            width: 8rem;
-            height: 8rem;
-            border-radius: 10rem;
-            background: #858383;
-        }
-
-        .eyes {
-            position: absolute;
-            width: 6rem;
-            height: 3rem;
-            bottom: 3.3rem;
-            left: 4.5rem;
-        }
-        .eyes2 {
-            position: absolute;
-            width: 6rem;
-            height: 3rem;
-            bottom: 3.3rem;
-            left: 1rem;
-        }
-
-        .outer-eye::before {
-            content: '';
-            position: absolute;
-            width: 2rem;
-            height: 2rem;
-            border-radius: 10rem;
-            background: #fff;
-        }
-
-        .inner-eye::before {
-            content: '';
-            position: absolute;
-            width: 1.3rem;
-            height: 1.3rem;
-            border-radius: 10rem;
-            background: #0a0a0a;
-            bottom: 1rem;
-            left: 6px;
-        }
-        .nose::before {
-            position: absolute;
-            content: '';
-            width: 1rem;
-            height: 1rem;
-            background: #f77d7d;
-            border: 3px solid #858383;
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            border-radius: 5px;
-            bottom: 3.5rem;
-            left: 3.1rem;
-            rotate: 180deg;
-        }
-
-        .ms-field,.ms-field2 {
-            display: flex;
-            gap: 5px;
-            width: 3rem;
-            height: 3rem;
-            flex-direction: column;
-            top: 3.6rem;
-            left: 1rem;
-            position: absolute;
-        }
-
-        .ms-field2 {
-            left: 4.5rem;
-        }
-
-        .ms-field hr ,.ms-field2 hr{
-            width: 2rem;
-            height: 1px;
-            background: #000;
-            z-index: 10;
-            position: absolute;
-            margin-top: 4px;
-        }
-
-        .mouth::before {
-            position: absolute;
-            content: '';
-            width: 3rem;
-            height: 3rem;
-            background: #000;
-            border-radius: 5rem;
-            bottom: 0.3rem;
-            left: 2.4rem;
-        }
-
-        .body {
-            width: 13rem;
-            height: 13rem;
-            background: #b8cbd1;
-            border-radius: 25rem;
-            position: absolute;
-            z-index: -1;
-            top: 9rem;
-            left: 11rem;
-        }
-
-        .legs {
-            position: absolute;
-            bottom: 5px;
-            left: 1.5rem;
-        }
-        .legs2 {
-            position: absolute;
-            bottom: 5px;
-            left: 8rem;
-        }
-
-        .legs hr{
-            width: 1.3rem;
-            z-index: 20;
-            border: 2px solid #000;
-        }
-
-        .legs2 hr{
-            width: 1.3rem;
-            z-index: 20;
-            border: 2px solid #000;
-        }
-
-        .legs {
-            position: absolute;
-            rotate: 90deg;
-            bottom: -1.3rem;
-            right: 5rem;
-        }
-
-        .legs2 {
-            position: absolute;
-            rotate: 90deg;
-            bottom: -1rem;
-            right: -1rem;
-        }
-
-        .line {
-            position: absolute;
-            bottom: -3rem;
-            left: 1.8rem;
-        }
-
-        .leg::before {
-            width: 3.5rem;
-            height: 3.5rem;
-            background: #858383;
-            content: '';
-            position: absolute;
-            border-radius: 5rem;
-            z-index: -1;
-        }
-
-        .val {
-            position: absolute;
-            right: -9rem;
-            top: 8rem;
-        }
-
-        .val span::before {
-            content: '';
-            position: absolute;
-            width: 2.5rem;
-            height: 2.5rem;
-            background: #858383;
-            border-radius: 5rem;
-        }
-        .val-field {
-            width: 10rem;
-            height: 8rem;
-                }
-        .v2 {
-            position: absolute;
-            left: 1.8rem;
-            top: -0.5rem;
-        }
-        .v3 {
-            position: absolute;
-            left: 3rem;
-            top: -1.7rem;
-        }
-        .v4 {
-            position: absolute;
-            left: 3.6rem;
-            top: -3.4rem;
-        }
-        .v5 {
-            position: absolute;
-            left: 3.7rem;
-            top: -5rem;
-        }
-
-        .v2 span::before, .v4 span::before {
-            background: #b8cbd1 !important;
-            z-index: 10;
-        }
-
-    </style>
+    <meta name="viewport" content="width=\
+    , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
+
 <body>
     <div class="container">
-        <div class="face-field">
+        <nav>
+            <img src="https://www.skillto.in/images/skillto-logo.svg" alt="">
+            <ul class="list-items" id="list">
+                <li>Our Programs</li>
+                <li>Communtity</li>
+                <li>About</li>
+                <li>Design Studeio</li>
+            </ul>
+            <i class="fa-solid fa-bars"></i>
+        </nav>
 
-            <div class="face">
-                <div class="ears">
-                    <span class="ear"></span>
-                </div>
-                <div class="ears2">
-                    <span class="ear"></span>
-                </div>
-                <div class="eyes">
-                    <div class="outer-eye">
-                        <div class="inner-eye"></div>
-                    </div>
-                    </div>
-                    <div class="eyes2">
-                    <div class="outer-eye">
-                        <div class="inner-eye"></div>
-                    </div>
-                </div>
-                <div class="nose"></div>
-                <div class="ms-field">
-                    <div class="h1">
-                        <hr>
-                    </div>
-                    <div class="h1">
-                        <hr>
-                    </div>
-                    <div class="h1">
-                        <hr>
-                    </div>
-                </div>
-                <div class="ms-field2">
-                    <div class="h1">
-                        <hr>
-                    </div>
-                    <div class="h1">
-                        <hr>
-                    </div>
-                    <div class="h1">
-                        <hr>
-                    </div>
-                </div>
-                <div class="ms-field2">
-                    <span class="l"></span>
-                    <span class="l"></span>
-                    <span class="l"></span>
-                </div>
-                <div class="mouth"></div>
+        <section class="section1">
+            <h1>Bootcamps</h1>
+            <h1>Short Term Programs</h1>
+            <p>Kickstart and dive into the world of Design, UI/Ux, Bbranding & Analytics. Learn with our live onlibe
+                classed
+                guided by an industry expert mentor.</p>
+            <b>7 Weeks Program including 4 week internship & major projects.</b>
+        </section>
+
+        <section class="section2">
+            <div class="card">
+                <img src="img1.jpg" alt="">
+                <h1>Social Media <br>Designer & Manager</h1>
+                <p>start your journey with Skillto in Social Media Desing & Management.</p>
             </div>
-        </div>
-        <div class="body">
-            <div class="legs">
-                <div class="leg">
-                    <div class="line">
-                        <hr>
-                        <hr>
-                        <hr>
-                    </div>
-                </div>
+            <div class="card">
+                <img src="img2.jpg" alt="">
+                <h1>UI/UX & Desing <br>Bootcamp</h1>
+                <p>start your journey with Skillto in Social Media Desing & Management.</p>
             </div>
-            <div class="legs2">
-                <div class="leg">
-                    <div class="line">
-                        <hr>
-                        <hr>
-                        <hr>
-                    </div>
-                </div>
+            <div class="card">
+                <img src="img3.jpg" alt="">
+                <h1>Power BI Analytic <br>Bootcamp</h1>
+                <p>start your journey with Skillto in Social Media Desing & Management.</p>
             </div>
-            <div class="val">
-                <div class="val-field">
-    
-                    <div class="v1">
-                        <span></span>
+        </section>
+
+        <section>
+
+            <section class="section3">
+                <h1>Why learn with <span>Skillto?</span></h1>
+                <div class="content-field">
+                    <div class="row">
+                        <span>
+                            <h3>Live Classes</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum impedit magnam
+                                expedita minus? Dolorem dolore</p>
+                        </span>
+                        <span>
+                            <h3>Major Projects</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum impedit magnam
+                                expedita minus? Dolorem dolore</p>
+                        </span>
+                        <span>
+                            <h3>300+</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum impedit magnam
+                                expedita minus? Dolorem dolore</p>
+                        </span>
+                        <span>
+                            <h3>0 Theory</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum impedit magnam
+                                expedita minus? Dolorem dolore</p>
+                        </span>
                     </div>
-                    <div class="v2">
-                        <span></span>
-                    </div>
-                    <div class="v3">
-                        <span></span>
-                    </div>
-                    <div class="v4">
-                        <span></span>
-                    </div>
-                    <div class="v5">
-                        <span></span>
+                    <div class="row">
+                        <span>
+                            <h3>1:1</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum impedit magnam
+                                expedita minus? Dolorem dolore</p>
+                        </span>
+                        <span>
+                            <h3>Small Batches</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum impedit magnam
+                                expedita minus? Dolorem dolore</p>
+                        </span>
+                        <span>
+                            <h3>20,000+</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum impedit magnam
+                                expedita minus? Dolorem dolore</p>
+                        </span>
+                        <span>
+                            <h3>98%</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorum impedit magnam
+                                expedita minus? Dolorem dolore</p>
+                        </span>
                     </div>
                 </div>
-        </div>
-        </div>
+            </section>
+        </section>
+
+
+        <section class="section4">
+            <h1 style="display: grid; grid-template-columns: 1fr 1fr;">Got more <div class="q">Questins?</div></h2></h1>
+            <p>Chances are at this stage you have a couple questions. We encourage our students to ask questions directly and you can arrage a quick call with us anytime.</p>
+            <span>
+                <b>Are there any prerequisites for this program?</b>
+                <b>></b>
+            </span>
+            <span>
+                <b>Are the classes conducted Live? What if I miss a Class?</b>
+                <b>></b>
+            </span>
+            <span>
+                <b>What if I have a question? How to connect to someone?</b>
+                <b>></b>
+            </span>
+            <span>
+                <b>How much time I need to dedicate to this Program?</b>
+                <b>></b>
+            </span>
+            <span>
+                <b>What's included with the Bottcamp Programs?</b>
+                <b>></b>
+            </span>
+            <span>
+                <b>Skillto v/s Others?</b>
+                <b>></b>
+            </span>
+        </section>
+
+
+
+        <section class="section5">
+            <h1>Stop wasting time,</h1>
+            <h1><div class="q">Upskill</div> Now!!</h1>
+            <p>Join our next batch, Learn new age skills and get a job in one of the most growing industries. Register now to know more details on how to Upsill with Skillto.</p>
+            <button>Register Now!</button>
+        </section>
     </div>
+
+    <footer>
+        <div class="row">
+            <div class="col">
+                <img src="https://www.skillto.in/images/skillto-logo.svg" alt="">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, praesentium voluptates ex labore nemo possimus rem suscipit</p>
+            </div>
+            <div class="col">
+                <b>Programs</b>
+                <ul>
+                    <li>UI/Ux & Design</li>
+                    <li>Branding desing</li>
+                    <li>Video Editing</li>
+                    <li>Data Science</li>
+                    <li>Data Analytics</li>
+                    <li>Bootcamps</li>
+                </ul>
+            </div>
+            <div class="col">
+                <b>Support</b>
+                <ul>
+                    <li>Register Now</li>
+                    <li>Join Skillto</li>
+                    <li>Affiliates</li>
+                    <li>Hire from us</li>
+                </ul>
+            </div>
+            <div class="col">
+                <b>Company</b>
+                <ul>
+                    <li>About</li>
+                    <li>Testimonials</li>
+                    <li>Community</li>
+                    <li>Design Studio</li>
+                </ul>
+            </div>
+            <div class="col">
+                <b>Policy Pages</b>
+                <ul>
+                    <li>Our Terms</li>
+                    <li>Privacy Policy</li>
+                    <li>Refund Policy</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="copy-right">
+            <p>&copy; 2024 Skillto Education</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>

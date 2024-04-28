@@ -1,0 +1,377 @@
+/*
+Background colour : #FAF9F5
+Red Color : #FF4A5F
+Footer Background colour : #F2F0E9
+Font Name : Merriweather
+
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+body {
+    background: #FAF9F5;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    padding: 0 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 10%;
+    position: sticky;
+    top: 0;
+    background: #FAF9F5;
+    width: 100%;
+    box-shadow: 0 1px 10px -7px;
+    z-index: 10;
+}
+
+nav img {
+    width: 4rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    transform: translateX(0%);
+}
+
+nav ul li {
+    background: #d5d5d465;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    background: #d5d5d4eb;
+}
+
+.section1,
+.section2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.section1 h1 {
+    font-size: 2.5rem;
+}
+
+.section1 h1:first-child {
+    background: #FF4A5F;
+    padding: 5px;
+    color: #fff;
+}
+
+.section1 p {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+
+.section2 {
+    /*  display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 1rem;
+    background: #fff;
+    transition: 0.2s;
+}
+
+.card:hover {
+    scale: 1.02;
+    box-shadow: 0 6px 10px -7px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h1 {
+    border-left: 3px solid #FF4A5F;
+    padding-left: 5px;
+}
+
+.section3 {
+    width: 100%;
+    border-radius: 1rem;
+    border: 2px solid #000;
+    padding: 5%;
+    box-shadow: 5px 5px #000;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.section3 h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.section3 h1:first-child span {
+    background: #FF4A5F;
+    color: #fff;
+    padding: 0 7px;
+}
+
+
+.row span {
+    border-radius: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.row span:hover {
+    background: #dddddc7a;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.section3 .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 1rem;
+}
+
+.section3 .row h3 {
+    border-left: 3px solid #FF4A5F;
+    padding-left: 10px;
+}
+
+.row p {
+    padding-left: 10px;
+}
+
+.content-field {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.section4 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.section4 h1 {
+    font-size: 2.5rem;
+}
+
+h1 .q {
+    background: #FF4A5F;
+    color: #fff;
+    padding: 0 5px;
+}
+
+.section4 p {
+    width: 80%;
+    text-align: center;
+}
+
+.section4 span {
+    display: flex;
+    width: 80%;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 5px 5px #000;
+    margin-top: 1rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.section4 span:hover {
+    background: #fef7da;
+}
+
+
+.section5 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section5 h1 {
+    display: flex;
+    gap: 5px;
+    font-size: 2.5rem;
+}
+
+.section5 p {
+    text-align: center;
+}
+
+.section5 button {
+    padding: 10px 10%;
+    outline: 0;
+    border: 0;
+    border-radius: 0.5rem;
+    background: #000;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px solid #000;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.section5 button:hover {
+    background: transparent;
+    color: #000;
+}
+
+footer {
+    display: flex;
+    background: #F2F0E9;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 10%;
+}
+
+footer img {
+    width: 5rem;
+}
+
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row ul {
+    list-style: none;
+}
+
+.row .col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.row .col:first-child {
+    width: 200px;
+}
+
+.row .col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 500;
+    color: #666;
+}
+
+.row .col b {
+    border-bottom: 1px solid #666;
+    padding: 8px 0;
+}
+
+
+.fa-solid {
+    display: none !important;
+}
+
+
+@media(max-width:600px) {
+    .section4 span {
+        width: 100%;
+    }
+
+    section {
+        padding: 1rem;
+    }
+}
+
+@media(max-width:900px) {
+    .section2 {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        font-size: 0.9rem;
+    }
+
+    .container {
+        font-size: 0.8rem !important;
+    }
+
+    .section1,
+    .section5 {
+        text-align: center;
+    }
+}
+
+@media(max-width:800px) {
+    .list-items {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background: #FAF9F5;
+        border: 2px solid;
+        padding: 2rem;
+        right: 10px;
+        top: 4.7rem;
+        border-radius: 1rem;
+        box-shadow: 5px 5px;
+        transition: 0.5s;
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+
+    .list-items li {
+        width: 100%;
+    }
+
+    .fa-solid {
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: block !important;
+    }
+}
